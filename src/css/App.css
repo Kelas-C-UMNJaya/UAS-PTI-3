@@ -1,10 +1,10 @@
 .ml12 {
     font-weight: 200;
-    font-size: 1.8em;
+    font-size: 70px;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
   }
   
   .ml12 .letter {
@@ -12,8 +12,17 @@
     line-height: 1em;
   }
 
+/* ================================ Button ================================ */
+#tombol {
+  margin-top: 200px;
+}
 
-/* Button */
+#center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button-30 {
   align-items: center;
   appearance: none;
@@ -26,7 +35,8 @@
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono",monospace;
-  height: 48px;
+  width: 200px;
+  height: 55px;
   justify-content: center;
   line-height: 1;
   list-style: none;
@@ -42,9 +52,8 @@
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
-  width: 100px;
-  margin-top: 10px;
+  font-size: 36px;
+  margin-top: 20px;
 }
 
 .button-30:focus {

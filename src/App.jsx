@@ -7,19 +7,21 @@ function App() {
       <div>
         <div>
 
-          <h1 class="ml12">7 Days Student</h1>
-
+          <h1 className="ml12">7 Days Student</h1>
         </div>
 
-        <div>
-          <button className="button-30">Start</button>
+        <div id='tombol'>
+          <div id='center'>
+            <button className="button-30 btn btn-primary center-block">Start</button>
+          </div>
+          <div id='center'>
+            <button className="button-30">About us</button>
+          </div>
+          <div id='center'>
+            <button className="button-30">Exit</button>
+          </div>
         </div>
-        <div>
-          <button className="button-30">About us</button>
-        </div>
-        <div>
-          <button className="button-30">Exit</button>
-        </div>
+
 
 
 
