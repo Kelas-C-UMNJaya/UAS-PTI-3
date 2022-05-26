@@ -9,6 +9,11 @@ function App() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const exit = () => {
+    // window.location.href = '/';
+    window.close();
+  };
+
   return (
     <div className="container-fluid">
       <div>
@@ -18,10 +23,10 @@ function App() {
 
         <div id='tombol'>
           <div id='center'>
-            <button className="button-30 btn btn-primary center-block">Start</button>
+            <button className="button-30 btn">Start</button>
           </div>
           <div id='center'>
-            <button className="button-30" onClick={handleShow} >About us</button>
+            <button className="button-30 btn" onClick={handleShow} >About us</button>
             <Modal
               show={show}
               onHide={handleClose}
@@ -45,12 +50,9 @@ function App() {
             </Modal>
           </div>
           <div id='center'>
-            <button className="button-30">Exit</button>
+            <button className="button-30" onClick={exit}>Exit</button>
           </div>
         </div>
-
-
-
 
 
 

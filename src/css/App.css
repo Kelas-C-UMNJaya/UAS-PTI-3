@@ -70,8 +70,10 @@
 }
 
 .button-30:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  /* box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset; */
+  box-shadow: rgba(0, 255, 0, 0.4) 0 4px 8px, rgba(255, 255, 255, 0.553) 0 7px 13px -3px, #0000ff 0 -3px 0 inset;
   transform: translateY(-2px);
+  color: brown;
 }
 
 .button-30:active {
