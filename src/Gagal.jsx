@@ -1,5 +1,7 @@
 import React from "react";
 import "./css/Lulus.css"
+import { Link } from "react-router-dom";
+
 
 function Lulus() {
 
@@ -18,8 +20,12 @@ function Lulus() {
                 <div>
                     <h1 className="ml6">Anda Tidak Lulus</h1>
                 </div>
+                <div>
+                    <Link to="/UAS-PTI-3" id='link'>
+                        <button className="button-30 ">Home</button>
+                    </Link>
+                </div>
                 <div id='center'>
-                    <button className="button-30 ">Home</button>
                     <button className="button-30 " onClick={exit}>Exit</button>
                 </div>
             </div>

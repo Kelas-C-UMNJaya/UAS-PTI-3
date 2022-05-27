@@ -22,8 +22,15 @@
   }
 
 /* ================================ Button ================================ */
+
+#link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #tombol {
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 #center {
@@ -62,7 +69,6 @@
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: 36px;
-  margin-top: 20px;
 }
 
 .button-30:focus {
