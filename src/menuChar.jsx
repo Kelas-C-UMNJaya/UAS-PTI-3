@@ -2,23 +2,25 @@ import React from 'react';
 import "./css/menuChar.css";
 import Form from 'react-bootstrap/Form';
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from "react-router-dom";
 
 
 function menuChar() {
     return (
         <div className='container-fluid'>
             <div>
-                <h1>7 Days student</h1>
+                <h1 className="ml12">7 Days Student</h1>
             </div>
-            <hr />
-            <div>
+            <hr id="garis" />
+            <hr id="garis" />
+
+            <div id='center' className='mt-3'>
                 {/* TODO: Kurang Gambar */}
-
-                <Carousel fade id='char'>
-                    <Carousel.Item>
+                <Carousel touch >
+                    <Carousel.Item >
                         <img
-
-                            className="d-block w-100"
+                            id='char'
+                            // className="d-block w-100"
                             src="https://cdn.discordapp.com/attachments/979742486807322705/979746440052105236/unknown.png"
                             alt="First slide"
                         />
@@ -29,8 +31,8 @@ function menuChar() {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-
-                            className="d-block w-100"
+                            id='char'
+                            // className="d-block w-100"
                             src="https://cdn.discordapp.com/attachments/979742486807322705/979748604761735168/unknown.png"
                             alt="Second slide"
                         />
@@ -40,27 +42,15 @@ function menuChar() {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption> */}
                     </Carousel.Item>
-                    {/* <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src="holder.js/800x400?text=Third slide&bg=20232a"
-                            alt="Third slide"
-                        />
-
-                        <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item> */}
                 </Carousel>
-
-
             </div>
-            <div className='mt-4'>
+
+
+            <div className='mt-4' id='center'>
                 <input type="text" placeholder='Enter Your Name Here' />
             </div>
-            <div className='mt-3'>
-                <Form.Select id="PS">
+            <div className='mt-3' id='center' >
+                <Form.Select id="FS">
                     <option>Program Studi</option>
                     <option value="1">Informatika</option>
                     <option value="2">Teknik Komputer</option>
@@ -68,8 +58,10 @@ function menuChar() {
                     <option value="4">Sistem Informasi</option>
                 </Form.Select>
             </div>
-            <div className='mt-3'>
-                <button>Start</button>
+            <div>
+                <Link to="/Lulus" id='link'>
+                    <button className="button-30">Start</button>
+                </Link>
             </div>
         </div>
     );
