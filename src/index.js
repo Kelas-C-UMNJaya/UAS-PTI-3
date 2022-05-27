@@ -18,10 +18,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<App />} />
+      <Route path='/UAS-PTI-3' element={<App />} />
+      <Route path='/MenuChar' element={<MenuChar />} />
       <Route path='/Lulus' element={<Lulus />} />
       <Route path='/Gagal' element={<Gagal />} />
-      <Route path='/UAS-PTI-3' element={<MenuChar />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

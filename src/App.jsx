@@ -24,7 +24,7 @@ function App() {
 
         <div id='tombol'>
           <div>
-            <Link to="/Lulus" id='link'>
+            <Link to="/MenuChar" id='link'>
               <button className="button-30">Start</button>
             </Link>
           </div>
