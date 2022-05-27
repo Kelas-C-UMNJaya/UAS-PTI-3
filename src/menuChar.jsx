@@ -1,74 +1,35 @@
-import React from "react";
-import ReactDOM from "react";
-import { DropdownMultiple, Dropdown } from 'react-bootstrap-dropdown-multiple';
+import React from 'react';
+import Form from 'react-bootstrap/Form';
+import "./css/menuChar.css"
 
-
-
-class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            studi: [
-                {
-                    label: 'Informatika',
-                    value: 'informatika',
-                },
-                {
-                    label: 'Teknik Komputer',
-                    value: 'teknik komputer',
-                },
-                {
-                    label: 'Teknik Elektro',
-                    value: 'teknik elektro',
-                },
-                {
-                    label: 'Teknik Fisika',
-                    value: 'teknik fisika',
-                },
-                {
-                    label: 'Sistem Informasi',
-                    value: 'siste infomasi',
-                },
-            ],
-        };
-    }
-
-    componentDidMount() {
-        window.addEventListener('keydown', this.tabKeyPressed);
-        window.addEventListener('mousedown', this.mouseClicked);
-    }
-
-    tabKeyPressed = (e) => {
-        if (e.keyCode === 9) {
-            document.querySelector('body').classList.remove('noFocus');
-            window.removeEventListener('keydown', this.tabKeyPressed);
-            window.addEventListener('mousedown', this.mouseClicked);
-        }
-    }
-
-    mouseClicked = () => {
-        document.querySelector('body').classList.add('noFocus');
-        window.removeEventListener('mousedown', this.mouseClicked);
-        window.addEventListener('keydown', this.tabKeyPressed);
-    }
-
-    onChange = (item, name) => { console.log(item, name); }
-
-    render() {
-        const { studi } = this.state;
-
-        return (
-            <div className="App">
-                <Dropdown
-                    name="program studi"
-                    searchable={['Cari Studi', 'Tidak Studi']}
-                    title="Program Studi"
-                    list={studi}
-                    onChange={this.onChange}
-                />
+function menuChar() {
+    return (
+        <div className='container-fluid'>
+            <div>
+                <h1>7 Days student</h1>
             </div>
-        );
-    }
+            <hr />
+            <div>
+                {/* TODO:  Carousel Karakter*/}
+            </div>
+            <div>
+                <input type="text" placeholder='Enter Your Name Here' />
+            </div>
+            <div className='mt-3'>
+                <Form.Select id="PS">
+                    <option>Program Studi</option>
+                    <option value="1">Informatika</option>
+                    <option value="2">Teknik Komputer</option>
+                    <option value="3">Teknik Fisika</option>
+                    <option value="4">Sistem Informasi</option>
+                </Form.Select>
+            </div>
+            <div className='mt-3'>
+                <button>Start</button>
+            </div>
+        </div>
+    );
 }
 
-export default App;
+
+export default menuChar
