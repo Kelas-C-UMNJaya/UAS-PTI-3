@@ -16,7 +16,7 @@ function Lulus() {
                     <h1 className="ml12">7 Days Student</h1>
                 </div>
                 <div>
-                    <h1 className="ml6">Selamat Anda Telah Lulus</h1>
+                    <h1 className="ml6">Anda Tidak Lulus</h1>
                 </div>
                 <div id='center'>
                     <button className="button-30 ">Home</button>
