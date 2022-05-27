@@ -1,7 +1,15 @@
+body {
+    background: wheat;
+}
+
 input {
     width: 200px;
 }
 
 #PS {
+    width: 200px;
+}
+
+#char {
     width: 200px;
 }

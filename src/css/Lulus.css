@@ -1,4 +1,10 @@
+body {
+  /* background: #C9CCD3;
+ background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+ background-blend-mode: lighten;*/
 
+ background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+} 
 
 /* ================================ Judul ================================ */
 .ml12 {
