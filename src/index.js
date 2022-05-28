@@ -7,6 +7,7 @@ import Lulus from "./Lulus";
 import Gagal from "./Gagal";
 import MenuChar from "./MenuChar";
 import Jam from "./components/Jam";
+import News from './components/News';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,7 +24,8 @@ root.render(
       <Route path='/MenuChar' element={<MenuChar />} />
       <Route path='/Lulus' element={<Lulus />} />
       <Route path='/Gagal' element={<Gagal />} />
-      <Route path='/UAS-PTI-3' element={<Jam />} />
+      <Route path='/Jam' element={<Jam />} />
+      <Route path='/UAS-PTI-3' element={<News/>} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
