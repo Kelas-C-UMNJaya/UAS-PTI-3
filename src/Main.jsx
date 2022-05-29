@@ -1,6 +1,6 @@
 import React from 'react';
 import "./css/Main.css";
-import { ProgressBar } from 'react-bootstrap';
+import Progress from "./components/Progress";
 
 function Main() {
     return (
@@ -10,7 +10,7 @@ function Main() {
                     <h1 className="ml12">7 Days Student</h1>
                 </div>
                 <div className='mt-5'>
-                    <ProgressBar now={50} />
+                    <Progress />
                 </div>
 
 

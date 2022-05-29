@@ -9,6 +9,7 @@ import MenuChar from "./MenuChar";
 import Jam from "./components/Jam";
 import News from './components/News';
 import Main from "./Main";
+import Progress from './components/Progress';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,6 +29,7 @@ root.render(
       <Route path='/Jam' element={<Jam />} />
       <Route path='/News' element={<News/>} />
       <Route path='/UAS-PTI-3' element={<Main/>} />
+      <Route path='/Progress' element={<Progress/>} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
