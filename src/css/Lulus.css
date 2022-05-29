@@ -44,13 +44,6 @@ body {
    align-items: center;
    margin-top: 100px;
   }
-
-  #center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-  }
   
   .button-30 {
     align-items: center;

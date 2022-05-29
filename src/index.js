@@ -11,6 +11,9 @@ import News from './components/News';
 import Main from "./Main";
 import Progress from './components/Progress';
 import Weather from './components/Weather';
+import HTP from "./components/HTP";
+import About from "./components/About";
+import Exit from "./components/Exit";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -31,7 +34,12 @@ root.render(
       <Route path='/News' element={<News/>} />
       <Route path='/Main' element={<Main/>} />
       <Route path='/Progress' element={<Progress/>} />
-      <Route path='/UAS-PTI-3' element={<Weather/>} />
+      <Route path='/Weather' element={<Weather/>} />
+      <Route path='/HTP' element={<HTP/>} />
+      <Route path='/About' element={<About/>} />
+      <Route path='/UAS-PTI-3' element={<Exit/>} />
+
+
 
     </Routes>
     </BrowserRouter>

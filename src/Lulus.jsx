@@ -1,15 +1,9 @@
 import React from "react";
 import "./css/Lulus.css"
 import { Link } from "react-router-dom";
+import Exit from "./components/Exit";
 
 function Lulus() {
-
-    const exit = () => {
-        // window.location.href = '/';
-        window.close();
-    };
-
-
     return (
         <div>
             <div>
@@ -24,8 +18,8 @@ function Lulus() {
                     <button className="button-30 ">Home</button>
                     </Link>
                 </div>
-                <div id='center'>
-                    <button className="button-30 " onClick={exit}>Exit</button>
+                <div>
+                    <Exit />
                 </div>
             </div>
         </div>
