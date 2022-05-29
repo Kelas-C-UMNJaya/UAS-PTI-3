@@ -10,6 +10,7 @@ import Jam from "./components/Jam";
 import News from './components/News';
 import Main from "./Main";
 import Progress from './components/Progress';
+import Weather from './components/Weather';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,8 +29,10 @@ root.render(
       <Route path='/Gagal' element={<Gagal />} />
       <Route path='/Jam' element={<Jam />} />
       <Route path='/News' element={<News/>} />
-      <Route path='/UAS-PTI-3' element={<Main/>} />
+      <Route path='/Main' element={<Main/>} />
       <Route path='/Progress' element={<Progress/>} />
+      <Route path='/UAS-PTI-3' element={<Weather/>} />
+
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
