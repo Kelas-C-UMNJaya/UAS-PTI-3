@@ -3,13 +3,14 @@ import "./css/menuChar.css";
 import Form from 'react-bootstrap/Form';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from "react-router-dom";
+import Header from './components/Header';
 
 
 function menuChar() {
     return (
         <div className='container-fluid'>
             <div>
-                <h1 className="ml12">7 Days Student</h1>
+                <Header />
             </div>
             <hr id="garis" />
             <hr id="garis" />

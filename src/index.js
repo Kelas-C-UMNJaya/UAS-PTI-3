@@ -14,6 +14,7 @@ import Weather from './components/Weather';
 import HTP from "./components/HTP";
 import About from "./components/About";
 import Exit from "./components/Exit";
+import Header from './components/Header';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,18 +27,19 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<App />} />
+      <Route path='/UAS-PTI-3' element={<App />} />
       <Route path='/MenuChar' element={<MenuChar />} />
       <Route path='/Lulus' element={<Lulus />} />
       <Route path='/Gagal' element={<Gagal />} />
       <Route path='/Jam' element={<Jam />} />
-      <Route path='/News' element={<News/>} />
+      <Route path='/News' element={<News/>} />npm
       <Route path='/Main' element={<Main/>} />
       <Route path='/Progress' element={<Progress/>} />
       <Route path='/Weather' element={<Weather/>} />
       <Route path='/HTP' element={<HTP/>} />
       <Route path='/About' element={<About/>} />
-      <Route path='/UAS-PTI-3' element={<Exit/>} />
+      <Route path='/Exit' element={<Exit/>} />
+      <Route path='/Header' element={<Header/>} />
 
 
 

@@ -2,6 +2,7 @@ import React from "react";
 import "./css/Lulus.css"
 import { Link } from "react-router-dom";
 import Exit from "./components/Exit";
+import Header from "./components/Header";
 
 
 function Lulus() {
@@ -9,7 +10,7 @@ function Lulus() {
         <div>
             <div>
                 <div>
-                    <h1 className="ml12">7 Days Student</h1>
+                    <Header />
                 </div>
                 <div>
                     <h1 className="ml6">Anda Tidak Lulus</h1>

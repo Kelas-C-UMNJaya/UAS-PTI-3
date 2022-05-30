@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import HTP from './components/HTP';
 import About from './components/About';
 import Exit from './components/Exit';
+import Header from './components/Header';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <div className="container-fluid">
       <div>
         <div>
-          <h1 className="ml12">7 Days Student</h1>
+          <Header />
         </div>
 
         <div id='tombol'>
