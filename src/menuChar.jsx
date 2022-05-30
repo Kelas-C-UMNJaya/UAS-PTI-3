@@ -60,7 +60,7 @@ function menuChar() {
                 </Form.Select>
             </div>
             <div>
-                <Link to="/Lulus" id='link'>
+                <Link to="/Main" id='link'>
                     <button className="button-30">Start</button>
                 </Link>
             </div>

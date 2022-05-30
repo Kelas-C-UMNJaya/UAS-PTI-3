@@ -1,0 +1,13 @@
+.ml12 {
+    font-weight: 200;
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
