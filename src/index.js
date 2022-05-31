@@ -27,19 +27,19 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
-      <Route path='/UAS-PTI-3' element={<App />} />
-      <Route path='/MenuChar' element={<MenuChar />} />
-      <Route path='/Lulus' element={<Lulus />} />
-      <Route path='/Gagal' element={<Gagal />} />
-      <Route path='/Jam' element={<Jam />} />
-      <Route path='/News' element={<News/>} />npm
-      <Route path='/Main' element={<Main/>} />
-      <Route path='/Progress' element={<Progress/>} />
-      <Route path='/Weather' element={<Weather/>} />
-      <Route path='/HTP' element={<HTP/>} />
-      <Route path='/About' element={<About/>} />
-      <Route path='/Exit' element={<Exit/>} />
-      <Route path='/Header' element={<Header/>} />
+      <Route path='/' element={<App />} />
+      <Route path='MenuChar' element={<MenuChar />} />
+      <Route path='Lulus' element={<Lulus />} />
+      <Route path='Gagal' element={<Gagal />} />
+      <Route path='Jam' element={<Jam />} />
+      <Route path='News' element={<News/>} />
+      <Route path='Main' element={<Main/>} />
+      <Route path='Progress' element={<Progress/>} />
+      <Route path='Weather' element={<Weather/>} />
+      <Route path='HTP' element={<HTP/>} />
+      <Route path='About' element={<About/>} />
+      <Route path='Exit' element={<Exit/>} />
+      <Route path='Header' element={<Header/>} />
 
 
 

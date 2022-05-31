@@ -1,12 +1,14 @@
 import './css/App.css';
-import { Link } from "react-router-dom";
 import HTP from './components/HTP';
 import About from './components/About';
 import Exit from './components/Exit';
 import Header from './components/Header';
+import { useNavigate } from 'react-router-dom';
 
 
 function App() {
+  const navigate = useNavigate();
+
   return (
 
     <div className="container-fluid">
@@ -17,9 +19,7 @@ function App() {
 
         <div id='tombol'>
           <div>
-            <Link to="/MenuChar" id='link'>
-              <button className="button-30">Start</button>
-            </Link>
+            <button className="button-30" onClick={() => navigate('MenuChar')}>Start</button>
           </div>
 
           <div>

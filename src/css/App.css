@@ -8,12 +8,6 @@ body {
 
 /* ================================ Button ================================ */
 
-#link {
-  display: flex;
-  justify-content: center;
-  margin: 0%;
-}
-
 #tombol {
   margin-top: 150px;
 }

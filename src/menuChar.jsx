@@ -2,11 +2,12 @@ import React from 'react';
 import "./css/menuChar.css";
 import Form from 'react-bootstrap/Form';
 import Carousel from 'react-bootstrap/Carousel';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import Header from './components/Header';
 
 
 function menuChar() {
+
     return (
         <div className='container-fluid'>
             <div>
@@ -60,8 +61,8 @@ function menuChar() {
                 </Form.Select>
             </div>
             <div>
-                <Link to="/Main" id='link'>
-                    <button className="button-30">Start</button>
+                <Link to='/menu'>
+                <button className="button-30" >Start</button>
                 </Link>
             </div>
         </div>
