@@ -25,9 +25,14 @@ function About() {
                     <Modal.Body>
                         <p className='container-fluid'>Kelompok 3</p>
                         <p className='mx-5'>- Christian Ivan Wibowo (00000058450)</p>
+
+
+                        {/* KALO NAMA KALIAN INGIN DIMASUKIN KERJAIN TUGASNYA YANG BENER!!!!!!
                         <p className='mx-5'>- Stanislaus Vieri Halim (00000057445)</p>
                         <p className='mx-5'>- James Bernard William (00000059431)</p>
-                        <p className='mx-5'>- Dhena Purnama (00000058902)</p>
+                        <p className='mx-5'>- Dhena Purnama (00000058902)</p> */}
+
+
                     </Modal.Body>
                     <Modal.Footer>
                         <p>version 16.15.0 LTS</p>
