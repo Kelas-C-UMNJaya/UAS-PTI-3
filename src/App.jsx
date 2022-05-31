@@ -1,4 +1,5 @@
 import './css/App.css';
+import './css/Button.css';
 import HTP from './components/HTP';
 import About from './components/About';
 import Exit from './components/Exit';
@@ -21,7 +22,6 @@ function App() {
           <div>
             <button className="button-30" onClick={() => navigate('MenuChar')}>Start</button>
           </div>
-
           <div>
             <HTP />
           </div>
