@@ -1,10 +1,12 @@
 import React from "react";
-import "./css/Lulus.css"
-import { Link } from "react-router-dom";
+import "./css/Lulus.css";
+import "./css/Button.css";
+import { useNavigate } from 'react-router-dom';
 import Exit from "./components/Exit";
 import Header from "./components/Header";
 
 function Lulus() {
+    const navigate = useNavigate();
     return (
         <div>
             <div>
@@ -14,10 +16,8 @@ function Lulus() {
                 <div>
                     <h1 className="ml6">Selamat Anda Telah Lulus</h1>
                 </div>
-                <div>
-                    <Link to="/UAS-PTI-3" id='link'>
-                    <button className="button-30 ">Home</button>
-                    </Link>
+                <div className="d-flex justify-content-center mt-5">
+                    <button className="button-30 " onClick={() => navigate('/UAS-PTI-3')}>Home</button>
                 </div>
                 <div>
                     <Exit />

@@ -7,22 +7,7 @@ body {
     background: linear-gradient(90deg, rgba(75,22,99,0.8575805322128851) 0%, rgba(63,63,98,0.7234244039412641) 50%, rgba(36,135,52,1) 100%);
 }
 
-/* ================================ Carousel ================================ */
-#char {
-    width: 300px;
-
-}
-
-#center {
-    display: flex;
-    justify-content: center;
-}
-
 /* ================================ Form ================================ */
-#nama {
-    display: flex;
-    justify-content: center;
-}
 input{
     width: 300px;
     height: 50px;
@@ -32,7 +17,6 @@ input{
 #FS {
     width: 300px;
     text-align: center;
-
 }
 
 
@@ -48,3 +32,9 @@ input{
     width: 100%;
     height: auto;
   }
+
+
+#IN {
+  border-radius: 20px;
+  background: skyblue;
+}

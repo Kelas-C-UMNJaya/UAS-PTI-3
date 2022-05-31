@@ -2,13 +2,19 @@ import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Header from './components/Header';
+import { useNavigate } from 'react-router-dom';
 import "./css/menuChar.css";
+import "./css/Button.css";
+
 
 function MenuChar() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const navigate = useNavigate();
+
 
     return (
         <div>
@@ -46,9 +52,11 @@ function MenuChar() {
               <Modal.Title>How To Play</Modal.Title>
             </Modal.Header> */}
                     <Modal.Body>
-                        <div>
-                            <div className='d-flex justify-content-center mt-3'>
-                                <input type="text" placeholder='Enter Your Name Here' />
+                        <div id="IN">
+                            <div className='d-flex justify-content-center mt-auto'>
+                                <div className='mt-2'>
+                                    <input type="text" placeholder='Enter Your Name Here' />
+                                </div>
                             </div>
                             <div className='d-flex justify-content-center mt-3'>
                                 <Form.Select id="FS">
@@ -59,8 +67,10 @@ function MenuChar() {
                                     <option value="4">Sistem Informasi</option>
                                 </Form.Select>
                             </div>
-                            <div className='d-flex justify-content-center mt-4'>
-                                <button>Start</button>
+                            <div className='d-flex justify-content-center mt-4 mb-auto'>
+                                <div className='mb-1'>
+                                    <button id="button-1" onClick={() => navigate('/Main')}>Start</button>
+                                </div>
                             </div>
                         </div>
                     </Modal.Body>

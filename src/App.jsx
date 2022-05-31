@@ -19,8 +19,8 @@ function App() {
         </div>
 
         <div id='tombol'>
-          <div>
-            <button className="button-30" onClick={() => navigate('MenuChar')}>Start</button>
+          <div className='d-flex justify-content-center '>
+            <button className="button-30" onClick={() => navigate('/MenuChar')}>Start</button>
           </div>
           <div>
             <HTP />

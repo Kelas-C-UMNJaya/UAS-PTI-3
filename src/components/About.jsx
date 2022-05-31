@@ -20,7 +20,7 @@ function About() {
                     id="modal"
                 >
                     <Modal.Header closeButton id="modalHeader">
-                        <Modal.Title>LOGO KITA</Modal.Title>
+                        <Modal.Title>7 Days Student</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <p className='container-fluid'>Kelompok 3</p>
