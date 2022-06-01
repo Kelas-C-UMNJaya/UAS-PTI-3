@@ -1,3 +1,8 @@
 #judul {
     text-align: center;
 }
+
+.responsive {
+    width: 350px;
+    height: auto;
+  }

@@ -12,5 +12,9 @@
 }
 
 #tambah {
-    width: 200px;
+    width: 150px;
+}
+
+#tambah:hover {
+    background-color: skyblue;
 }
