@@ -11,13 +11,13 @@ function Progress() {
       setBar(oldValue => {
         const newValue = oldValue - 1;
 
-         if (newValue === 100) {
-         //clearInterval(interval); //newvalue==100, gimana ngelimitnya?
-         }
+        //  if (newValue === 100) {
+        //  //clearInterval(interval); //newvalue==100, gimana ngelimitnya?
+        //  }
 
-         if (newValue === 0) {
-         //clearInterval(interval); //newvalue==0, gimana direct ke gagal.jsx?
-         }
+        //  if (newValue === 0) {
+        //  //clearInterval(interval); //newvalue==0, gimana direct ke gagal.jsx?
+        //  }
 
         console.log(newValue);
 
@@ -26,20 +26,13 @@ function Progress() {
     }, 1000);
   }, []);
 
-
-
   console.log(bar);
 
   function increase() {
     setBar(bar + 10);
   }
 
-
-
   return (
-
-
-
     <div id="bar">
       <div className="mt-3 mb-2">
         <div className="container">
@@ -57,7 +50,7 @@ function Progress() {
                 <Icon icon="dashicons:book-alt" width="50" height="50" />
               </div>
               <div className="col-md-5 ">
-                <div id="Main">
+                <div id="Belajar">
                   <ProgressBar now={bar} min={0} max={100} />
                 </div>
               </div>
@@ -68,7 +61,7 @@ function Progress() {
                 <Icon icon="icon-park-outline:fork-spoon" width="50" height="50" />
               </div>
               <div className="col-md-3 ">
-                <div id="Belajar">
+                <div id="Makan">
                   <ProgressBar now={bar} min={0} max={100} />
                 </div>
               </div>
@@ -76,8 +69,8 @@ function Progress() {
                 <Icon icon="fa:gamepad" width="50" height="50" />
               </div>
               <div className="col-md-5 ">
-                <div id="Makan">
-                  <ProgressBar now={bar} min={0} max={100} />
+                <div id="Main">
+                  <ProgressBar now={bar} min={0} max={100}/>
                 </div>
               </div>
             </div>
@@ -90,11 +83,11 @@ function Progress() {
 
 
 
-        <div className='mt-5 d-flex justify-content-center'>
-          <button  className="Button-20" id="Main" onClick={increase}>Main</button>
-          <button  className="Button-20" id="Tidur" onClick= {increase}>Tidur</button>
-          <button  className="Button-20" id="Belajar" onClick={increase}>Belajar</button>
-          <button  className="Button-20" id="Makan" onClick={increase}>Makan</button>
+        <div className='mt-5 d-flex'>
+          <button onClick={increase}>Main</button>
+          <button onClick={increase}>Tidur</button>
+          <button onClick={increase}>Belajar</button>
+          <button onClick={increase}>Makan</button>
         </div>
 
 

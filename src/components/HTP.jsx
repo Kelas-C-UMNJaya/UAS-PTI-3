@@ -27,9 +27,9 @@ function HTP() {
                 <p> - Pemain akan memilih karakter yang akan digunakan pada menu pilih karakter. </p>
                 <p> - Pemain memasukan nama pemain yang akan digunakan. </p>
                 <p> - Pemain akan memulai permainan pada hari Minggu jam 00.00. </p>
-                <p> - Pemain akan bermain selama -----------------. </p>
-                <p> - Pemain akan memenangkan permainan jika ------------------. </p>
-                <p> - Pemain akan kalah jika ----------------------------. </p>
+                <p> - Pemain akan bermain selama satu minggu (7 hari) waktu dalam permainan. </p>
+                <p> - Pemain akan memenangkan permainan jika pemain berhasil bertahan selama satu minggu (7 hari). </p>
+                <p> - Pemain akan kalah jika ada salah satu bar dalam permainan yang mencapai 0. </p>
               </Modal.Body>
               <Modal.Footer>
                 <p>Selamat Bermain</p>

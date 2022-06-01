@@ -33,10 +33,10 @@ function MenuChar() {
 
             <div id='center'>
                 <div className='d-flex justify-content-center gap-3 mt-5'>
-                    <button onClick={handleShow} >
+                    <button onClick={handleShow} id="avatar">
                         <img src="https://cdn.discordapp.com/attachments/979742486807322705/979746440052105236/unknown.png" alt="" className="responsive" width="300" height="300" />
                     </button>
-                    <button onClick={handleShow} >
+                    <button onClick={handleShow} id="avatar" >
                         <img src="https://cdn.discordapp.com/attachments/979742486807322705/979748604761735168/unknown.png" alt="" className="responsive" width="300" height="300" />
                     </button>
                 </div>
