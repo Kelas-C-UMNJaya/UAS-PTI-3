@@ -79,7 +79,7 @@ function Progress() {
     }, 2000);
   }, []);
 
-  // console.log(tidur);
+  console.log(tidur);
 
   function increase_tidur() {
     setTidur(tidur + 10);

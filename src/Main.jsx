@@ -1,13 +1,28 @@
-import React from 'react';
+import React  from 'react';
 import "./css/Main.css";
 import Progress from "./components/Progress";
+// import News from "./components/News";
+import Jam from './components/Jam';
+
 
 function Main() {
+ function BGHome() {
+    document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/946947787235414067/981552451243085854/unknown.png')";
+  }
+
+  function BGCampus() {
+    document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/946947787235414067/981552508088492102/MG_2052-1024x683.jpeg') ";
+  }
+
     return (
         <div className='container-fluid '>
             <div className='mt-3'>
                 <h2 id='judul'>7 Days Student</h2>
                 <hr id='garis' />
+            </div>
+
+            <div className='d-flex justify-content-center'>
+                <Jam />
             </div>
 
             <div className='d-flex justify-content-center'>
@@ -21,10 +36,10 @@ function Main() {
                         </div>
                         <div className='d-flex gap-3 mt-3'>
                             <div>
-                                <button id="tambah">Home</button>
+                                <button id='tambah' onClick={BGHome}>Home</button>
                             </div>
                             <div>
-                                <button id="tambah">Campus</button>
+                                <button id='tambah' onClick={BGCampus}>Campus</button>
                             </div>
                         </div>
                     </div>
@@ -33,7 +48,6 @@ function Main() {
                         <Progress />
                     </div>
                 </div>
-
                 <div>
                     <div>
                         <img src="https://media.discordapp.net/attachments/979742486807322705/981510594274422804/unknown.png" alt="" className="responsive mx-5" />
@@ -41,12 +55,13 @@ function Main() {
                 </div>
             </div>
 
-
-
-
-
+            {/* <div>
+                <News />
+            </div> */}
         </div>
-    )
+    );
 }
+
+
 
 export default Main;

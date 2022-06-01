@@ -55,7 +55,7 @@ function MenuChar() {
                         <div id="IN">
                             <div className='d-flex justify-content-center mt-auto'>
                                 <div className='mt-2'>
-                                    <input type="text" placeholder='Enter Your Name Here' />
+                                    <input type="text" id="NamaLo" placeholder='Enter Your Name Here' />
                                 </div>
                             </div>
                             <div className='d-flex justify-content-center mt-3'>

@@ -4,6 +4,24 @@ function Jam() {
 
   const [detik, setDetik] = useState(0);
   const [jam, setJam] = useState(0);
+  const [salam, setSalam] = useState('');
+
+  // ================== Salam ===================
+  const jamSalam = () => {
+    if (jam >= 0 && jam <= 11) {
+      setSalam('Selamat Pagi');
+    } else if (jam >= 12 && jam <= 15) {
+      setSalam('Selamat Siang');
+    } else if (jam >= 16 && jam <= 18) {
+      setSalam('Selamat Sore');
+    } else if (jam >= 19 && jam <= 23) {
+      setSalam('Selamat Malam');
+    }
+  }
+
+
+
+
 
   // ================== Jam ===================
 
@@ -52,7 +70,10 @@ function Jam() {
   return (
     <div>
       <div>
-        <h1>{jam}:{detik}</h1>
+        <h2>{jam}:{detik}</h2>
+      </div>
+      <div>
+        <h2>{salam}</h2>  
       </div>
     </div>
   )

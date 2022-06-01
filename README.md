@@ -8,4 +8,4 @@ Nama Anggota :
 <!-- KALO NAMA KALIAN INGIN DIMASUKIN KERJAIN TUGASNYA YANG BENER!!!!!!
 - Stanislaus Vieri Halim (00000057445)
 - James Bernard William (00000059431)
-- Dhena Purnama (00000058902) -->
+- Dhena Purnama (00000058902) 
