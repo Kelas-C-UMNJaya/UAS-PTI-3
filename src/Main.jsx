@@ -8,6 +8,7 @@ function Main() {
             <div>
                 <div className='mt-3'>
                     <h2 id='judul'>7 Days Student</h2>
+                    <hr id='garis' />
                 </div>
                 <div className='mt-5'>
                     <Progress />
