@@ -11,6 +11,20 @@ const tulisan = {
 function Jam() {
   const [jam, setJam] = useState(startOfToday());
   const [salam, setSalam] = useState();
+  const [name, setName] = useState();
+  const [jurusan, setJurusan] = useState();
+
+  useEffect(() => {
+    const prevName = localStorage.getItem('name');
+    const prevJurusan = JSON.parse(localStorage.getItem(jurusan) ?? "[]");
+    setName(prevName);
+    setJurusan(prevJurusan);
+  }, []);
+
+
+
+
+
 
   const updateTime = () => {
     setJam((time) => addMinutes(time, 1));
@@ -61,6 +75,10 @@ function Jam() {
             </div>
             <div className=''>
               <h4>{salam}</h4>
+            </div>
+            <div className='d-flex justify-content-center'>
+              <h4>{name}</h4>
+              <h4>{jurusan}</h4>
             </div>
           </div>
 

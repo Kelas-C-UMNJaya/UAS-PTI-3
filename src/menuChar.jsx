@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Header from './components/Header';
 import { useNavigate } from 'react-router-dom';
+import Select from "react-select";
 import "./css/menuChar.css";
 import "./css/Button.css";
+
+const SELECT_VALUE_KEY = "jurusan";
+const options = [
+    { value: 'Informatika', label: 'Informatika' },
+    { value: 'Teknik Komputer', label: 'Teknik Komputer' },
+    { value: 'Teknik Fisika', label: 'Teknik Fisika' },
+    { value: 'Sistem Informasi', label: 'Sistem Informasi' },
+
+]
 
 
 function MenuChar() {
@@ -14,6 +24,22 @@ function MenuChar() {
     const handleShow = () => setShow(true);
 
     const navigate = useNavigate();
+
+    // ==========================================================================
+
+    const [name, setName] = useState();
+
+    useEffect(() => {
+        localStorage.setItem('name', name);
+    }, [name]);
+
+
+    const [jurusan, setJurusan] = useState("");
+    const handleChange = (s) => {
+        localStorage.setItem(SELECT_VALUE_KEY, JSON.stringify(s));
+        setJurusan(s);
+    };
+
 
 
     return (
@@ -28,8 +54,6 @@ function MenuChar() {
             <div>
                 <h5 className='d-grid justify-content-center mt-3 ' id='head'>Pilih Karakter</h5>
             </div>
-
-
 
             <div id='center'>
                 <div className='d-flex justify-content-center gap-3 mt-5'>
@@ -55,17 +79,20 @@ function MenuChar() {
                         <div id="IN">
                             <div className='d-flex justify-content-center mt-auto'>
                                 <div className='mt-2'>
-                                    <input type="text" id="NamaLo" placeholder='Enter Your Name Here' />
+                                    <input type="text" placeholder="Enter Your Name Here" onChange={(e) => setName(e.target.value)} />
+                                    {/* placeholder='Enter Your Name Here'
+                                        value={name}
+                                    /> */}
                                 </div>
                             </div>
                             <div className='d-flex justify-content-center mt-3'>
-                                <Form.Select id="FS">
-                                    <option>Program Studi</option>
-                                    <option value="1">Informatika</option>
-                                    <option value="2">Teknik Komputer</option>
-                                    <option value="3">Teknik Fisika</option>
-                                    <option value="4">Sistem Informasi</option>
-                                </Form.Select>
+                                <Select
+                                    value={jurusan}
+                                    onChange={handleChange}
+                                    options={options}
+                                    placeholder="Program Studi"
+                                    id="FS"
+                                />
                             </div>
                             <div className='d-flex justify-content-center mt-4 mb-auto'>
                                 <div className='mb-1'>

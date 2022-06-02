@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./css/Main.css";
 import Progress from "./components/Progress";
 // import News from "./components/News";
@@ -7,19 +7,19 @@ import Jam from './components/Jam';
 
 
 function Main() {
+    const [bg, setBg] = useState("BGHome");
+
+    function home() {
+        setBg("BGHome")
+    }
 
 
-    // function BGHome() {
-    //     setBg(BGHome)
-    // }
-
-
-    // function BGCampus() {
-    //     setBg(BGCampus)
-    // }
+    function campus() {
+        setBg("BGCampus")
+    }
 
     return (
-        <div className='container-fluid ' id="BGCampus">
+        <div className='container-fluid ' id={bg}>
             <div className='mt-3'>
                 <h2 id='judul'>7 Days Student</h2>
                 <hr id='garis' />
@@ -45,10 +45,10 @@ function Main() {
                         </div>
                         <div className='d-flex gap-3 mt-3'>
                             <div>
-                                <button id='tambah' >Home</button>
+                                <button id='tambah' onClick={home} >Home</button>
                             </div>
                             <div>
-                                <button id='tambah'>Campus</button>
+                                <button id='tambah' onClick={campus}>Campus</button>
                             </div>
                         </div>
                     </div>
