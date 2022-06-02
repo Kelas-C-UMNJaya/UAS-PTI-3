@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const style = {
     border: "2px solid black",
+    background: "skyblue",
 };
 
 function News() {
@@ -27,7 +28,7 @@ function News() {
     return (
         <div className="container">
             <div>
-                <img src={data} style={style} className="mt-5" />
+                <img src={data} style={style} />
             </div>
         </div>
     )

@@ -3,6 +3,7 @@ import "./css/Main.css";
 import Progress from "./components/Progress";
 // import News from "./components/News";
 import Jam from './components/Jam';
+// import Weather from './components/Weather';
 
 
 function Main() {
@@ -24,8 +25,13 @@ function Main() {
                 <hr id='garis' />
             </div>
 
-            <div className='d-flex justify-content-center'>
-                <Jam />
+            <div className='d-flex justify-content-center '>
+                <div>
+                    <Jam />
+                </div>
+                {/* <div>
+                    <Weather />
+                </div> */}
             </div>
 
             <div className='d-flex justify-content-center'>

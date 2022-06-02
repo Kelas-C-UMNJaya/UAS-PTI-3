@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { addMinutes, format, startOfToday, } from 'date-fns'
+import Weather from './Weather';
 
 const tulisan = {
   background: "black",
@@ -20,7 +21,6 @@ function Jam() {
     }, 250);
     return () => clearInterval(interval);
   }, []);
-
 
   // ================== Salam ===================
 
@@ -49,14 +49,25 @@ function Jam() {
 
   return (
     <div>
+
       <div className='p-2' style={tulisan}>
-        <div className='d-grid justify-content-center'>
-          <h4>{format(jam, 'HH:mm')}</h4>
-        </div>
-        <div className='d-grid justify-content-center'>
-          <h4>{salam}</h4>
+        <div className='d-flex justify-content-center'>
+
+          <div className='d-grid'>
+            <div className=''>
+              <h4>{format(jam, 'HH:mm')}</h4>
+            </div>
+            <div className=''>
+              <h4>{salam}</h4>
+            </div>
+          </div>
+
+          <div className='mx-2'>
+            <Weather />
+          </div>
         </div>
       </div>
+
     </div>
   );
 }
