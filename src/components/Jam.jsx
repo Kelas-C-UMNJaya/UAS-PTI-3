@@ -1,82 +1,63 @@
 import React, { useState, useEffect } from 'react';
+import { addMinutes, format, startOfToday, } from 'date-fns'
+
+const tulisan = {
+  background: "black",
+  color: "white",
+};
 
 function Jam() {
+  const [jam, setJam] = useState(startOfToday());
+  const [salam, setSalam] = useState();
 
-  const [detik, setDetik] = useState(0);
-  const [jam, setJam] = useState(0);
-  const [salam, setSalam] = useState('');
-
-  // ================== Salam ===================
-  const jamSalam = () => {
-    if (jam >= 0 && jam <= 11) {
-      setSalam('Selamat Pagi');
-    } else if (jam >= 12 && jam <= 15) {
-      setSalam('Selamat Siang');
-    } else if (jam >= 16 && jam <= 18) {
-      setSalam('Selamat Sore');
-    } else if (jam >= 19 && jam <= 23) {
-      setSalam('Selamat Malam');
-    }
+  const updateTime = () => {
+    setJam((prevVal) => addMinutes(prevVal, 1));
   }
 
-
-
-
-
-  // ================== Jam ===================
-
-
   useEffect(() => {
-    setInterval(() => {
-
-      for (let i = 0; i < 24; i++) {
-        setTimeout(function timer() {
-          console.log(i);
-          setJam(i);
-        }, i * 30000);
-      }
-    }, 30000);
+    const interval = setInterval(() => {
+      updateTime();
+    }, 250);
+    return () => clearInterval(interval);
   }, []);
 
 
+  // ================== Salam ===================
 
-  // ================== Detik ===================
+  const updateSalam = () => {
+    if (format(jam, 'HH') >= '05' && format(jam, 'HH') <= '10') {
+      setSalam('Selamat Pagi');
+    } else if (format(jam, 'HH') >= '10' && format(jam, 'HH') <= '15') {
+      setSalam('Selamat Siang');
+    } else if (format(jam, 'HH') >= '15' && format(jam, 'HH') <= '18') {
+      setSalam('Selamat Sore');
+    } else if (format(jam, 'HH') >= '18' && format(jam, 'HH') <= '22') {
+      setSalam('Selamat Malam');
+    } else if (format(jam, 'HH') >= '22' && format(jam, 'HH') <= '24') {
+      setSalam('Selamat Tidur');
+    } else {
+      setSalam('Selamat Tidur');
+    }
+  }
+  // console.log(salam);
 
   useEffect(() => {
-    setInterval(() => {
+    updateSalam();
+  }, [jam]);
 
-      for (let j = 0; j < 60; j++) {
-        setTimeout(function timer() {
-          console.log(j);
-          setDetik(j);
-        }, j * 500);
-      }
-    }, 30000)
-  }, []);
-
-
-
-
-  // ================= Bener ==================
-  // useEffect(() => {
-  //   for (let j = 0; j < 60; j++) {
-  //     setTimeout(function timer() {
-  //       console.log(j);
-  //       setDetik(j);
-  //     }, j * 500);
-  //   }
-  // }, []);
+  // console.log(format(jam, 'HH'));
 
   return (
     <div>
-      <div>
-        <h2>{jam}:{detik}</h2>
-      </div>
-      <div>
-        <h2>{salam}</h2>  
+      <div className='p-2' style={tulisan}>
+        <div className='d-grid justify-content-center'>
+          <h4>{format(jam, 'HH:mm')}</h4>
+        </div>
+        <div className='d-grid justify-content-center'>
+          <h4>{salam}</h4>
+        </div>
       </div>
     </div>
-  )
+  );
 }
-
 export default Jam;

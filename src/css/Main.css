@@ -1,3 +1,24 @@
+#BGHome {
+    background: url(../components/kamar.png);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+#BGCampus {
+    background: url(../components/kelas.png);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
 #judul {
     text-align: center;
 }

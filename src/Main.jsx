@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import "./css/Main.css";
 import Progress from "./components/Progress";
 // import News from "./components/News";
@@ -6,16 +6,19 @@ import Jam from './components/Jam';
 
 
 function Main() {
- function BGHome() {
-    document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/946947787235414067/981552451243085854/unknown.png')";
-  }
 
-  function BGCampus() {
-    document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/946947787235414067/981552508088492102/MG_2052-1024x683.jpeg') ";
-  }
+
+    // function BGHome() {
+    //     setBg(BGHome)
+    // }
+
+
+    // function BGCampus() {
+    //     setBg(BGCampus)
+    // }
 
     return (
-        <div className='container-fluid '>
+        <div className='container-fluid ' id="BGCampus">
             <div className='mt-3'>
                 <h2 id='judul'>7 Days Student</h2>
                 <hr id='garis' />
@@ -36,10 +39,10 @@ function Main() {
                         </div>
                         <div className='d-flex gap-3 mt-3'>
                             <div>
-                                <button id='tambah' onClick={BGHome}>Home</button>
+                                <button id='tambah' >Home</button>
                             </div>
                             <div>
-                                <button id='tambah' onClick={BGCampus}>Campus</button>
+                                <button id='tambah'>Campus</button>
                             </div>
                         </div>
                     </div>

@@ -84,4 +84,4 @@ function MenuChar() {
 }
 
 
-export default MenuChar
+export default MenuChar;
