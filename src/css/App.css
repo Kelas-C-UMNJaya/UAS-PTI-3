@@ -1,4 +1,11 @@
-
+#BGAtap {
+  background: url(../assets/atap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 750px;
+  width: 100%;
+}
 
 /* ================================ Button ================================ */
 

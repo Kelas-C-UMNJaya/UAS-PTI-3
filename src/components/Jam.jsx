@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { addMinutes, format, startOfToday, } from 'date-fns'
+import { addMinutes, format, startOfToday } from 'date-fns'
 import Weather from './Weather';
 
 const tulisan = {
   background: "black",
   color: "white",
+  borderRadius: "15px",
 };
 
 function Jam() {
@@ -12,7 +13,7 @@ function Jam() {
   const [salam, setSalam] = useState();
 
   const updateTime = () => {
-    setJam((prevVal) => addMinutes(prevVal, 1));
+    setJam((time) => addMinutes(time, 1));
   }
 
   useEffect(() => {
@@ -54,7 +55,8 @@ function Jam() {
         <div className='d-flex justify-content-center'>
 
           <div className='d-grid'>
-            <div className=''>
+
+            <div>
               <h4>{format(jam, 'HH:mm')}</h4>
             </div>
             <div className=''>

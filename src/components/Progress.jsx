@@ -99,38 +99,38 @@ function Progress() {
 
   return (
     <div id="bar" className='container-fluid'>
-      <div className="mt-3 mb-2">
+      <div className="mt-3 mb-2" id='PB'>
 
-        <div className='d-flex gap-3'>
+        <div className='d-flex gap-3 mt-2 mb-2' >
           <div className='d-grid gap-5 mx-3 '>
             <div className='d-flex gap-4 '>
-              <div className="col-md-1 d-grid justify-content-end">
+              <div className=" d-grid justify-content-end">
                 <Icon icon="fa:bed" width="50" height="50" />
               </div>
               <div className="" id="Tidur">
-                <ProgressBar now={tidur} min={0} max={100} />
+                <ProgressBar variant="danger" now={tidur} min={0} max={100} />
               </div>
             </div>
 
             <div className='d-flex gap-4'>
-              <div className="col-md-1 d-grid justify-content-end">
+              <div className=" d-grid justify-content-end">
                 <Icon icon="icon-park-outline:fork-spoon" width="50" height="50" />
               </div>
               <div className="col-md-5 ">
                 <div id="Belajar">
-                  <ProgressBar now={makan} min={0} max={100} />
+                  <ProgressBar variant="danger" now={makan} min={0} max={100} />
                 </div>
               </div>
             </div>
           </div>
 
-          <div className='d-grid gap-5 '>
+          <div className='d-grid gap-5 mx-4'>
             <div className='d-flex gap-4 '>
               <div className="col-md-1 d-grid justify-content-end">
                 <Icon icon="dashicons:book-alt" width="50" height="50" />
               </div>
               <div className="" id="Tidur">
-                <ProgressBar now={belajar} min={0} max={100} />
+                <ProgressBar variant="danger" now={belajar} min={0} max={100} />
               </div>
             </div>
 
@@ -140,29 +140,27 @@ function Progress() {
               </div>
               <div className="col-md-5 ">
                 <div id="Belajar">
-                  <ProgressBar now={main} min={0} max={100} />
+                  <ProgressBar variant="danger" now={main} min={0} max={100} />
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-
-
-
-
-        <div className='mt-5 d-flex gap-2 justify-content-start' >
+      <div id="BGBTN" className='mt-5'>
+        <div className='mt-2 mx-3 d-flex gap-2 justify-content-start' >
           <button id="tambah" onClick={increase_tidur}>Tidur</button>
           <button id="tambah" onClick={increase_makan}>Makan</button>
           <button id="tambah" onClick={increase_belajar}>Belajar</button>
           <button id="tambah" onClick={increase_main}>Main</button>
         </div>
-
-
-
       </div>
+
+
+
     </div>
   )
 }
 
-export default Progress
+export default Progress;

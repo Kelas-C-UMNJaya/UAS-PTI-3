@@ -17,8 +17,8 @@ function MenuChar() {
 
 
     return (
-        <div>
-            <div>
+        <div id='BGChar'>
+            <div id='head'>
                 <Header />
             </div>
 
@@ -26,7 +26,7 @@ function MenuChar() {
             <hr id="garis" />
 
             <div>
-                <h5 className='d-grid justify-content-center mt-3 '>Pilih Karakter</h5>
+                <h5 className='d-grid justify-content-center mt-3 ' id='head'>Pilih Karakter</h5>
             </div>
 
 

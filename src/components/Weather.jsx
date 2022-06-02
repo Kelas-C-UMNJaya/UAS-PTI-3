@@ -4,6 +4,7 @@ import axios from 'axios'
 const style = {
     border: "2px solid black",
     background: "skyblue",
+    padding: "2px",
 };
 
 function News() {
@@ -16,11 +17,11 @@ function News() {
             .get(url)
             .then((res) => {
                 setData(res.data.current.condition.icon);
-                console.log(res.data.current.condition.icon);
+                // console.log(res.data.current.condition.icon);
             })
         //   .catch((err) => console.log(err));
 
-        console.log(data);
+        // console.log(data);
     }, []);
 
 
