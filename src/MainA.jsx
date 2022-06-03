@@ -1,46 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./css/Main.css";
 import ProgressBarContainer from "./components/Progress";
-// import News from "./components/News";
 import Jam from './components/Jam';
-// import Weather from './components/Weather';
-
-
+import News from "./components/News.jsx";
 
 function Main() {
     const [bg, setBg] = useState("BGHome");
     const [char, setChar] = useState("https://media.discordapp.net/attachments/979742486807322705/981510594274422804/unknown.png");
-
     function home() {
-
         setBg("BGHome")
         setChar("https://media.discordapp.net/attachments/979742486807322705/981510594274422804/unknown.png")
     }
-
-
     function campus() {
         setBg("BGCampus")
         setChar("https://cdn.discordapp.com/attachments/946947787235414067/982226588697509938/unknown.png")
     }
-
     return (
         <div className='container-fluid ' id={bg}>
-            <div className='mt-3'>
+            <div className='mt-2'>
                 <h2 id='judul'>7 Days Student</h2>
                 <hr id='garis' />
             </div>
-
+            <News />
             <div className='d-flex justify-content-center '>
                 <div>
                     <Jam />
                 </div>
-                {/* <div>
-                    <Weather />
-                </div> */}
             </div>
-
             <div className='d-flex justify-content-center'>
-
                 <div>
                     <div id='CL'>
                         <div>
@@ -57,7 +44,6 @@ function Main() {
                             </div>
                         </div>
                     </div>
-
                     <div className='mt-5'>
                         <ProgressBarContainer />
                     </div>
@@ -68,14 +54,7 @@ function Main() {
                     </div>
                 </div>
             </div>
-
-            {/* <div>
-                <News />
-            </div> */}
         </div>
     );
 }
-
-
-
 export default Main;

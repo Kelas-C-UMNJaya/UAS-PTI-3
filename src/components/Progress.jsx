@@ -113,7 +113,11 @@ export const ProgressBarContainer = () => {
           onClick={() => {
             if (food < 20 || sleep < 20) {
               alert("Energimu ga cukup untuk belajar,Silahkan Istirahat dulu!");
-            } else if (food == 0){
+            } 
+            if( percentRange == 0 ){
+              navigate('/Gagal')
+            }
+            else {
               setProgress(percentRange < 100 ? percentRange + 20 : 100);
               setFood(food > 0 ? food - 10 : 0);
               setSleep(sleep > 0 ? sleep - 10 : 0);
@@ -127,6 +131,9 @@ export const ProgressBarContainer = () => {
             if (food < 20 || sleep < 20) {
               alert("Kamu butuh energi! Pastikan kamu sudah Makan dan Tidur");
             } 
+            if(happy == 0 ){
+              navigate('/Gagal')
+            }
             else {
               setHappy(happy < 100 ? happy + 20 : 100);
               setFood(food > 0 ? food - 10 : 0);
@@ -141,7 +148,7 @@ export const ProgressBarContainer = () => {
             if (food < 10) {
               alert("Kamu mulai Lapar. Makan dulu yuk!");
             }
-            else if (food == 0) {
+            if (food == 0) {
               navigate('/Gagal')
             }
             setFood(food < 100 ? food + 20 : 100);

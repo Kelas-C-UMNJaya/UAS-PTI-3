@@ -7,7 +7,7 @@ import Lulus from "./Lulus";
 import Gagal from "./Gagal";
 import MenuChar from "./MenuChar";
 import Jam from "./components/Jam";
-import News from './components/News';
+import News from './components/News.jsx';
 import MainA from "./MainA";
 import MainB from "./MainB";
 import Progress from './components/Progress';
