@@ -8,7 +8,8 @@ import Gagal from "./Gagal";
 import MenuChar from "./MenuChar";
 import Jam from "./components/Jam";
 import News from './components/News';
-import Main from "./Main";
+import MainA from "./MainA";
+import MainB from "./MainB";
 import Progress from './components/Progress';
 import Weather from './components/Weather';
 import HTP from "./components/HTP";
@@ -33,7 +34,8 @@ root.render(
       <Route path='Gagal' element={<Gagal />} />
       <Route path='Jam' element={<Jam />} />
       <Route path='News' element={<News/>} />
-      <Route path='Main' element={<Main/>} />
+      <Route path='MainA' element={<MainA/>} />
+      <Route path='MainB' element={<MainB/>} />
       <Route path='Progress' element={<Progress/>} />
       <Route path='Weather' element={<Weather/>} />
       <Route path='HTP' element={<HTP/>} />

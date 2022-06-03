@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { addMinutes, format, startOfToday } from 'date-fns'
 import Weather from './Weather';
+import { useNavigate } from 'react-router-dom';
 
 const tulisan = {
   background: "black",
@@ -12,19 +13,34 @@ function Jam() {
   const [jam, setJam] = useState(startOfToday());
   const [salam, setSalam] = useState();
   const [name, setName] = useState();
-  const [jurusan, setJurusan] = useState();
+  const [day, setDay] = useState(0);
+  const navigate = useNavigate();
+  // const [jurusan, setJurusan] = useState();
+
+
+
+  // =========================== BENER =====================
+  useEffect(() => {
+    // setDay(day + 1);
+    const interval = setInterval(() => {
+      setDay(day + 1);
+    }, 720000);
+    return () => clearInterval(interval);
+
+  }, [day])
+
+  if (day > 7) {
+    navigate('/Lulus');
+  }
+
 
   useEffect(() => {
     const prevName = localStorage.getItem('name');
-    const prevJurusan = JSON.parse(localStorage.getItem(jurusan) ?? "[]");
+    // const prevJurusan = localStorage.getItem('jurusan');
+    // const prevJurusan = JSON.parse(localStorage.getItem(jurusan) ?? "[]");
     setName(prevName);
-    setJurusan(prevJurusan);
+    // setJurusan(prevJurusan);
   }, []);
-
-
-
-
-
 
   const updateTime = () => {
     setJam((time) => addMinutes(time, 1));
@@ -33,7 +49,7 @@ function Jam() {
   useEffect(() => {
     const interval = setInterval(() => {
       updateTime();
-    }, 250);
+    }, 500);
     return () => clearInterval(interval);
   }, []);
 
@@ -58,7 +74,7 @@ function Jam() {
 
   useEffect(() => {
     updateSalam();
-  }, [jam]);
+  });
 
   // console.log(format(jam, 'HH'));
 
@@ -69,20 +85,27 @@ function Jam() {
         <div className='d-flex justify-content-center'>
 
           <div className='d-grid'>
-
-            <div>
-              <h4>{format(jam, 'HH:mm')}</h4>
+            <div className='d-flex'>
+              <div>
+                <h4>Day-{day} |</h4>
+              </div>
+              <div>
+                <h4>| {format(jam, 'HH:mm')}</h4>
+              </div>
             </div>
-            <div className=''>
+
+            <div className='d-flex justify-content-center'>
               <h4>{salam}</h4>
             </div>
             <div className='d-flex justify-content-center'>
               <h4>{name}</h4>
-              <h4>{jurusan}</h4>
             </div>
+            {/* <div>
+              <h4>{jurusan}</h4>
+            </div> */}
           </div>
 
-          <div className='mx-2'>
+          <div className='mx-2 mt-3'>
             <Weather />
           </div>
         </div>

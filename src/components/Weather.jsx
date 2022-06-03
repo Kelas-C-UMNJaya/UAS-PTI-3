@@ -18,6 +18,8 @@ function News() {
             .then((res) => {
                 setData(res.data.current.condition.icon);
                 // console.log(res.data.current.condition.icon);
+                // console.log(res.data.current);
+
             })
         //   .catch((err) => console.log(err));
 
@@ -27,7 +29,7 @@ function News() {
 
 
     return (
-        <div className="container">
+        <div className="container-fluid">
             <div>
                 <img src={data} style={style} />
             </div>

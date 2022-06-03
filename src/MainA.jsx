@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./css/Main.css";
-import Progress from "./components/Progress";
+import ProgressBarContainer from "./components/Progress";
 // import News from "./components/News";
 import Jam from './components/Jam';
 // import Weather from './components/Weather';
 
 
+
 function Main() {
     const [bg, setBg] = useState("BGHome");
+    const [char, setChar] = useState("https://media.discordapp.net/attachments/979742486807322705/981510594274422804/unknown.png");
 
     function home() {
+
         setBg("BGHome")
+        setChar("https://media.discordapp.net/attachments/979742486807322705/981510594274422804/unknown.png")
     }
 
 
     function campus() {
         setBg("BGCampus")
+        setChar("https://cdn.discordapp.com/attachments/946947787235414067/982226588697509938/unknown.png")
     }
 
     return (
@@ -43,23 +48,23 @@ function Main() {
                                 <u>Change Location</u>
                             </h3>
                         </div>
-                        <div className='d-flex gap-3 mt-3'>
+                        <div className='d-flex gap-4 mt-3'>
                             <div>
-                                <button id='tambah' onClick={home} >Home</button>
+                                <button className="PindahTempat" id='tambah' onClick={home} >Home</button>
                             </div>
                             <div>
-                                <button id='tambah' onClick={campus}>Campus</button>
+                                <button className="PindahTempat" id='tambah' onClick={campus}>Campus</button>
                             </div>
                         </div>
                     </div>
 
                     <div className='mt-5'>
-                        <Progress />
+                        <ProgressBarContainer />
                     </div>
                 </div>
                 <div>
                     <div>
-                        <img src="https://media.discordapp.net/attachments/979742486807322705/981510594274422804/unknown.png" alt="" className="responsive mx-5" />
+                        <img src={char} alt="" className="responsive mx-5" />
                     </div>
                 </div>
             </div>

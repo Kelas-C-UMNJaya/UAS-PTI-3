@@ -1,3 +1,21 @@
+#BGLulus {
+    background: url(../assets/BgLulus.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+  
+}
+
+#BGGagal {
+    background: url(../assets/BGGO.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+}
 
 
 .ml6 {
@@ -13,4 +31,10 @@
 .ml6 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+#nama {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
